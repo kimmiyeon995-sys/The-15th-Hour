@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 15th Hour Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="lang-bar">
+            <span onclick="changeLanguage('vi')">VN</span> | 
+            <span onclick="changeLanguage('en')">EN</span>
+        </div>
+
+        <header class="header">
+            <h1 id="app-title">THE 15<span class="underline">TH</span> HOUR</h1>
+            <p id="app-slogan">Coffee • Tea • Drinks</p>
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search drink...">
+            </div>
+        </header>
+
+        <div class="categories">
+            <div class="cat-item active" onclick="filterProduct('all')">All</div>
+            <div class="cat-item" onclick="filterProduct('coffee')">☕ Coffee</div>
+            <div class="cat-item" onclick="filterProduct('milktea')">🧋 Milk Tea</div>
+            <div class="cat-item" onclick="filterProduct('fruittea')">🍹 Fruit Tea</div>
+        </div>
+
+        <main class="content">
+            <h2 id="text-popular">Popular Drinks</h2>
+            <div class="product-scroll-container" id="product-list">
+                </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active"><i class="fa fa-home"></i><span class="nav-text">Home</span></div>
+            <div class="nav-item"><i class="fa fa-book-open"></i><span class="nav-text">Menu</span></div>
+            <div class="nav-item cart-item">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="cart-badge">0</span>
+                <span class="nav-text">Cart</span>
+            </div>
+            <div class="nav-item"><i class="fa fa-user"></i><span class="nav-text">Me</span></div>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
